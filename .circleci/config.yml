@@ -40,4 +40,4 @@ jobs:
 workflows:
   my_workflow:
     jobs:
-      - smoke-test
+      - smoke_test
