@@ -1,0 +1,18 @@
+Resources:
+  AnsibleCircleCI:
+    Type: AWS::EC2::Instance
+    Properties:
+      AvailabilityZone: us-east-1b
+      BlockDeviceMappings:
+        - DeviceName: "/dev/sdk"
+          Ebs:
+            VolumeSize: 10
+      InstanceType: t2.micro
+      ImageId: ami-0022f774911c1d690
+      KeyName: udacity
+      SubnetId: subnet-0f65febf70edaca8e
+      SecurityGroupIds: 
+        - sg-0c772b40a5fbee999
+      Tags:
+        - Key: Name
+          Value: ans-circleci
